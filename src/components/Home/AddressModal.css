@@ -16,3 +16,40 @@
     padding: 20px;
     border-radius: 10px;
 }
+
+.addr_modal h2 {
+    text-align: center;
+}
+
+.addr_input {
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.addr_input input {
+    padding: 5px 0px;
+    border: none;
+    border-bottom: 2px solid gray;
+    font-size: 18px;
+}
+
+.addr_input input:focus {
+    outline: none;
+}
+
+.addr_btn {
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    transition: 0.5s;
+}
+
+.addr_btn:hover {
+    background-color: #067306;
+    cursor: pointer;
+}

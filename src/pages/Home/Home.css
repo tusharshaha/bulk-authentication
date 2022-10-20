@@ -1,7 +1,14 @@
-.address_title{
+.home_container {
+    position: relative;
+}
+
+.address_title {
     text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
     margin-bottom: 40px;
 }
+
 .gallary {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -14,12 +21,13 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .gallary{
+    .gallary {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media only screen and (max-width: 400px) {
-    .gallary{
+    .gallary {
         grid-template-columns: repeat(2, 1fr);
     }
 }

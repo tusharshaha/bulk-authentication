@@ -3,7 +3,7 @@ import React from 'react';
 const NotFound: React.FC = () => {
     return (
         <div>
-            <h3>404 | Page not found!</h3>
+            <h1 style={{ textAlign: "center" }}>404 | Page not found!</h1>
         </div>
     );
 };

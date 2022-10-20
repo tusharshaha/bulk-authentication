@@ -1,11 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import AddressModal from 'src/components/Home/AddressModal';
-import { AppDispatch, RootState } from 'src/redux/store';
+import { RootState } from 'src/redux/store';
 import "./Home.css";
 
 const Home: React.FC = () => {
-    const dispatch = useDispatch<AppDispatch>();
     const { address } = useSelector((state: RootState) => state.users.value)
     const gallary: string[] = [
         "https://i.ibb.co/Hq0YjBy/pressure-250x227.png",
@@ -17,11 +16,14 @@ const Home: React.FC = () => {
         "https://i.ibb.co/wgrvzLM/product06-250x227.jpg",
         "https://i.ibb.co/r6FM7d1/product07-250x227.jpg"
     ]
-    console.log(address)
     return (
-        <div>
-            <AddressModal />
-            <h3 className='address_title'>You're from Dhaka, Bangladesh</h3>
+        <div className='home_container'>
+            {
+                address ?
+                    <h3 className='address_title'>You're from {address}</h3>
+                    :
+                    <AddressModal />
+            }
             <div className='gallary'>
                 {
                     gallary.map((ele, i) => <div key={i}>
